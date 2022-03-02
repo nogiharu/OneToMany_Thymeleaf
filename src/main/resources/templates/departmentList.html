@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <table border="2">
+        <tr th:each="dpt,stat : ${department}">
+            <td th:text="${dpt.id}"></td>
+            <td th:text="${dpt.name}"></td>
+            <td th:text="${#lists.size(dpt.employeeList)}"></td>
+        </tr>
+        <!-- <tr>
+            <div th:each="dpt,stat : ${department}">
+                    <td th:text="${dpt.id}"></td>
+                    <td th:text="${dpt.name}"></td>
+                    <td th:text="${stat.size}"></td>
+            </div>
+        </tr> -->
+        <!-- <div th:each="emp,stat : ${employee}">
+                <td th:text="${stat.size}"></td>
+                <td th:text="${emp.id}"></td>
+                <td th:text="${emp.name}"></td>
+                <td th:text="${emp.department.name}"></td>
+            </div> -->
+        <tr>
+            <td th:text="${totalEmp}"></td>
+            <td>Total</td>
+        </tr>
+    </table>
+</body>
+
+</html>
