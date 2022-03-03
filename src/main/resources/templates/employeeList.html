@@ -7,10 +7,10 @@
     </head>
     <body>
         <table border="2">
-            <tr th:each="emp : ${employee}">
-                <td th:text="${emp.id}"></td>
-                <td th:text="${emp.name}"></td>
-                <td th:text="${emp.department.id}"></td>
+            <tr th:each="task : ${employee}">
+                <td th:text="${task.employeeName}"></td>
+                <td th:text="${task.employeeId}"></td>
+               <!--  <td th:text="${emp.department.id}"></td> -->
             </tr>
         </table>
     </body>
